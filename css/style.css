@@ -1,0 +1,41 @@
+body{
+  font-family: 'Poor Story', cursive;
+  display: flex;
+  justify-content: center;
+  background: url(./bg.jpg);
+  background-size: 100%;
+  color: black;
+
+}
+
+textarea{
+  background-color: black;
+  color: green;
+}
+
+.metodo {
+  background: black;
+  color: green;
+}
+
+.coddecod{
+  margin-right: 18px;
+}
+
+.enviar{
+  display: flex;
+  color:green;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
+  margin-top: 20%;
+  padding: 10px;
+  border: solid black 2px;
+  border-radius: 10px;
+  background-color: green;
+}

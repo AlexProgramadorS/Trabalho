@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificador/Decodificador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <form class="decoder">
+      <div class="flex-container">
+        <h2>CODIFICAR/DECODIFICAR</h2>
+
+        <textarea id="entrada"cols="30"rows="7" required placeholder="Escreva sua mensagem"></textarea>
+
+        <fieldset>
+          <legend>Escolha o método</legend>
+          <select  class="metodo" required>
+            <option>Escolha</option>
+            <option>Cifra de Cesar</option>
+            <option>Base 64</option>
+          </select>
+        </fieldset>
+
+        <div class="passo">
+          <p>Incremento:  </p>
+          <input id="chave" type="range" value="21" min="1" max="99" oninput="this.nextElementSibling.value = this.value"/>
+          <output>21</output>
+        </div>
+
+        <fieldset class="tipo">
+          <div class="coddecod">
+            <input type="radio" name="coddecod" value="msg-codigo" id="codificar" checked/>
+            <label for="codificar">Codificar</label>
+          </div>
+          <div class="cod-decod">
+            <input type="radio" name="coddecod" value="codigo-msg" id="decodificar"/>
+            <label for="decodificar">Decodificar</label>
+          </div>
+        </fieldset>
+
+        <output class="saida">
+          <textarea cols="30"rows="7"class="resposta"></textarea>
+        </output>
+
+        <button type="button" class="btn btn-dark enviar">Codificar Mensagem!</button>
+      </div>
+    </form>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
